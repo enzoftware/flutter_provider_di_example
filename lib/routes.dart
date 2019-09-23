@@ -26,7 +26,12 @@ class Router {
         return MaterialPageRoute(
           builder: (_) => Scaffold(
             body: Center(
-              child: Text('No route defined'),
+              child: Text(
+                'No route defined',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
             ),
           ),
         );

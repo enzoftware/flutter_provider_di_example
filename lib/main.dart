@@ -5,7 +5,10 @@ import 'package:provider_di/core/services/authentication.dart';
 import 'package:provider_di/locator.dart';
 import 'package:provider_di/routes.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  setupLocator();
+  runApp(MyApp());
+} 
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
@@ -17,7 +20,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Provider Architecture Example',
         theme: ThemeData(),
-        initialRoute: initialRoute,
+        initialRoute: '/login',
         onGenerateRoute: Router.generateRoutes,
       ),
     );
