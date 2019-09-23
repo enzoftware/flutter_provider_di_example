@@ -30,7 +30,8 @@ class ApiService {
     var response = await client.get('$endpoint/comments?postId=$postId');
     var parsed = json.decode(response.body) as List<dynamic>;
     for (var comment in parsed){
-      comments.add(comment);
+      var c = Comment.fromJson(comment);
+      comments.add(c);
     }
     return comments;
   }
