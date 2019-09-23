@@ -12,6 +12,7 @@ class CommentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseScreen<CommentViewModel>(
+      onModelReady: (model) => model.fetchComments(postId),
       builder: (context, model, child) {
         return model.state == ViewState.BUSY
             ? Center(

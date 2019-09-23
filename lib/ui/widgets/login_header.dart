@@ -6,9 +6,11 @@ class LoginHeader extends StatelessWidget {
   final TextEditingController controller;
   final String validationMessage;
 
-  const LoginHeader(
-      {Key key, @required this.controller, this.validationMessage})
-      : super(key: key);
+  const LoginHeader({
+    Key key,
+    @required this.controller,
+    this.validationMessage,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
